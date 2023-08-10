@@ -85,8 +85,8 @@
                 "text": "Web Server"
               },
               "body": {
-                "stroke": "#333333",
-                "strokeWidth": 1,
+                "stroke": "red",
+                "strokeWidth": 3,
                 "strokeDasharray": null
               }
             },
@@ -101,8 +101,35 @@
               "outOfScope": false,
               "reasonOutOfScope": "",
               "privilegeLevel": "",
-              "hasOpenThreats": false,
-              "threats": []
+              "hasOpenThreats": true,
+              "threats": [
+                {
+                  "id": "5c30b20f-41e5-4b6f-babb-ff2a3d0a2f30",
+                  "title": "DoS",
+                  "status": "Open",
+                  "severity": "Medium",
+                  "type": "Denial of service",
+                  "description": "Provide a description for this threat",
+                  "mitigation": "Provide remediation for this threat or a reason if status is N/A",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 5,
+                  "score": ""
+                },
+                {
+                  "id": "36b47f61-4ac6-4261-aaa2-eb0484a31fc4",
+                  "title": "web server can be spoofed by attacker",
+                  "status": "Open",
+                  "severity": "Medium",
+                  "type": "Spoofing",
+                  "description": "the web site may be fake\nA fake version of the web server may be implemented by the attacker",
+                  "mitigation": "Authentication should be implemented\nDigital certificate ",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 10,
+                  "score": ""
+                }
+              ]
             }
           },
           {
@@ -147,65 +174,32 @@
               "threats": [
                 {
                   "id": "299a12cb-69c3-44d8-948f-2a8298f4bd58",
-                  "title": "Data may be modified in store",
+                  "title": "Content of Database may be modified",
                   "status": "Open",
                   "severity": "Medium",
                   "type": "Tampering",
-                  "description": "Data may be modified ",
-                  "mitigation": "Provide remediation for this threat or a reason if status is N/A",
+                  "description": "SQL injection could result in tampering attack",
+                  "mitigation": "SQL queries should be encrypted to prevent tampering\nSQL queries should be sanitized and filtered to prevent unwanted attack.",
                   "modelType": "STRIDE",
                   "new": false,
                   "number": 4,
                   "score": ""
+                },
+                {
+                  "id": "e4c30b8a-656f-4f67-b158-c19de49e76cb",
+                  "title": "Lack of auditing in database transaction",
+                  "status": "Open",
+                  "severity": "Medium",
+                  "type": "Repudiation",
+                  "description": "Provide a description for this threat",
+                  "mitigation": "Provide remediation for this threat or a reason if status is N/A",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 9,
+                  "score": ""
                 }
               ]
             }
-          },
-          {
-            "shape": "flow",
-            "attrs": {
-              "line": {
-                "stroke": "#333333",
-                "strokeWidth": 1,
-                "targetMarker": {
-                  "name": "classic"
-                },
-                "strokeDasharray": null
-              }
-            },
-            "width": 200,
-            "height": 100,
-            "zIndex": 10,
-            "connector": "smooth",
-            "data": {
-              "type": "tm.Flow",
-              "name": "Data Flow",
-              "description": "",
-              "outOfScope": false,
-              "reasonOutOfScope": "",
-              "protocol": "",
-              "isEncrypted": false,
-              "isPublicNetwork": false,
-              "hasOpenThreats": false,
-              "threats": []
-            },
-            "id": "81578226-d160-4719-a1cb-72c6a8fdb988",
-            "source": {
-              "x": 96,
-              "y": 146
-            },
-            "target": {
-              "cell": "4f83185f-b2dd-497c-8022-7509215f1dc8"
-            },
-            "vertices": [
-              {
-                "x": 140,
-                "y": 120
-              }
-            ],
-            "labels": [
-              "Data Flow"
-            ]
           },
           {
             "shape": "flow",
@@ -301,6 +295,51 @@
             "shape": "flow",
             "attrs": {
               "line": {
+                "stroke": "#333333",
+                "strokeWidth": 1,
+                "targetMarker": {
+                  "name": "classic"
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Data Flow",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "protocol": "",
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "hasOpenThreats": false,
+              "threats": []
+            },
+            "id": "81578226-d160-4719-a1cb-72c6a8fdb988",
+            "source": {
+              "cell": "4f83185f-b2dd-497c-8022-7509215f1dc8"
+            },
+            "target": {
+              "cell": "d2572a7b-a0cc-4948-b531-4b9c86290860"
+            },
+            "vertices": [
+              {
+                "x": 140,
+                "y": 150
+              }
+            ],
+            "labels": [
+              "Data Flow"
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
                 "stroke": "red",
                 "targetMarker": {
                   "name": "classic"
@@ -366,10 +405,10 @@
             },
             "id": "3d68e40b-bf52-43a9-a2c3-83b5be14c0a0",
             "source": {
-              "cell": "4f83185f-b2dd-497c-8022-7509215f1dc8"
+              "cell": "d2572a7b-a0cc-4948-b531-4b9c86290860"
             },
             "target": {
-              "cell": "d2572a7b-a0cc-4948-b531-4b9c86290860"
+              "cell": "4f83185f-b2dd-497c-8022-7509215f1dc8"
             },
             "vertices": [
               {
@@ -386,6 +425,6 @@
     ],
     "diagramTop": 2,
     "reviewer": "",
-    "threatTop": 4
+    "threatTop": 10
   }
 }
