@@ -10,17 +10,16 @@
     "contributors": [],
     "diagrams": [
       {
-        "id": 0,
-        "title": "Stride Diagram Practice",
+        "id": 1,
+        "title": "Practice STRIDE diagram",
         "diagramType": "STRIDE",
         "placeholder": "New STRIDE diagram description",
         "thumbnail": "./public/content/images/thumbnail.stride.jpg",
         "version": "2.0.4-RC3",
-        "cells": [],
-        "description": "W3"
+        "cells": []
       }
     ],
-    "diagramTop": 1,
+    "diagramTop": 2,
     "reviewer": "",
     "threatTop": 0
   }
