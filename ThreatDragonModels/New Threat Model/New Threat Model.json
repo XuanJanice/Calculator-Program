@@ -167,25 +167,27 @@
               "description": "",
               "outOfScope": false,
               "reasonOutOfScope": "",
-              "protocol": "",
+              "protocol": "http",
               "isEncrypted": false,
               "isPublicNetwork": false,
               "hasOpenThreats": false,
               "threats": []
             },
-            "id": "81578226-d160-4719-a1cb-72c6a8fdb988",
+            "id": "3d68e40b-bf52-43a9-a2c3-83b5be14c0a0",
             "source": {
-              "x": 96,
-              "y": 146
+              "cell": "4f83185f-b2dd-497c-8022-7509215f1dc8"
             },
             "target": {
-              "cell": "4f83185f-b2dd-497c-8022-7509215f1dc8"
+              "cell": "d2572a7b-a0cc-4948-b531-4b9c86290860"
             },
             "vertices": [
               {
                 "x": 140,
-                "y": 120
+                "y": 250
               }
+            ],
+            "labels": [
+              "Data Flow"
             ]
           },
           {
@@ -216,18 +218,22 @@
               "hasOpenThreats": false,
               "threats": []
             },
-            "id": "3d68e40b-bf52-43a9-a2c3-83b5be14c0a0",
+            "id": "81578226-d160-4719-a1cb-72c6a8fdb988",
             "source": {
-              "cell": "4f83185f-b2dd-497c-8022-7509215f1dc8"
+              "x": 96,
+              "y": 146
             },
             "target": {
-              "cell": "d2572a7b-a0cc-4948-b531-4b9c86290860"
+              "cell": "4f83185f-b2dd-497c-8022-7509215f1dc8"
             },
             "vertices": [
               {
                 "x": 140,
-                "y": 250
+                "y": 120
               }
+            ],
+            "labels": [
+              "Data Flow"
             ]
           },
           {
@@ -248,7 +254,7 @@
             "connector": "smooth",
             "data": {
               "type": "tm.Flow",
-              "name": "Data Flow",
+              "name": "DB Response",
               "description": "",
               "outOfScope": false,
               "reasonOutOfScope": "",
@@ -270,6 +276,9 @@
                 "x": 360,
                 "y": 150
               }
+            ],
+            "labels": [
+              "DB Response"
             ]
           },
           {
@@ -290,7 +299,7 @@
             "connector": "smooth",
             "data": {
               "type": "tm.Flow",
-              "name": "Data Flow",
+              "name": "SQL Command",
               "description": "",
               "outOfScope": false,
               "reasonOutOfScope": "",
@@ -312,103 +321,10 @@
                 "x": 360,
                 "y": 230
               }
+            ],
+            "labels": [
+              "SQL Command"
             ]
-          },
-          {
-            "position": {
-              "x": 86,
-              "y": 71.3750000000008
-            },
-            "size": {
-              "width": 112.5,
-              "height": 60
-            },
-            "attrs": {
-              "text": {
-                "text": "Data flow"
-              }
-            },
-            "visible": true,
-            "shape": "td-text-block",
-            "id": "945ddfc3-275a-44f8-9999-e05c07d34ffe",
-            "zIndex": 11,
-            "data": {
-              "type": "tm.Text",
-              "name": "Data flow",
-              "hasOpenThreats": false
-            }
-          },
-          {
-            "position": {
-              "x": 66.5,
-              "y": 246.3750000000008
-            },
-            "size": {
-              "width": 112.5,
-              "height": 60
-            },
-            "attrs": {
-              "text": {
-                "text": "Data flow"
-              }
-            },
-            "visible": true,
-            "shape": "td-text-block",
-            "id": "562aaee2-02d1-4956-9cf1-14e7725da20e",
-            "data": {
-              "type": "tm.Text",
-              "name": "Data flow",
-              "hasOpenThreats": false
-            },
-            "zIndex": 12
-          },
-          {
-            "position": {
-              "x": 312.08333333333303,
-              "y": 216.3750000000008
-            },
-            "size": {
-              "width": 112.5,
-              "height": 60
-            },
-            "attrs": {
-              "text": {
-                "text": "SQL Command"
-              }
-            },
-            "visible": true,
-            "shape": "td-text-block",
-            "id": "8e98d224-cc68-4e03-9279-110da0535721",
-            "zIndex": 13,
-            "data": {
-              "type": "tm.Text",
-              "name": "SQL Command",
-              "hasOpenThreats": false
-            }
-          },
-          {
-            "position": {
-              "x": 300,
-              "y": 110
-            },
-            "size": {
-              "width": 112.5,
-              "height": 60
-            },
-            "attrs": {
-              "text": {
-                "text": "DB Response"
-              }
-            },
-            "visible": true,
-            "shape": "td-text-block",
-            "id": "f5cd8e42-4a3d-45c7-b653-2632b4fa3c2b",
-            "zIndex": 14,
-            "data": {
-              "type": "tm.Text",
-              "name": "DB Response",
-              "hasOpenThreats": false
-            }
           }
         ]
       }
