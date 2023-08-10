@@ -119,11 +119,13 @@
                 "text": "SQL Database"
               },
               "topLine": {
-                "strokeWidth": 1,
+                "stroke": "red",
+                "strokeWidth": 3,
                 "strokeDasharray": null
               },
               "bottomLine": {
-                "strokeWidth": 1,
+                "stroke": "red",
+                "strokeWidth": 3,
                 "strokeDasharray": null
               }
             },
@@ -141,54 +143,23 @@
               "storesCredentials": false,
               "isEncrypted": false,
               "isSigned": false,
-              "hasOpenThreats": false,
-              "threats": []
+              "hasOpenThreats": true,
+              "threats": [
+                {
+                  "id": "299a12cb-69c3-44d8-948f-2a8298f4bd58",
+                  "title": "Data may be modified in store",
+                  "status": "Open",
+                  "severity": "Medium",
+                  "type": "Tampering",
+                  "description": "Data may be modified ",
+                  "mitigation": "Provide remediation for this threat or a reason if status is N/A",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 4,
+                  "score": ""
+                }
+              ]
             }
-          },
-          {
-            "shape": "flow",
-            "attrs": {
-              "line": {
-                "stroke": "#333333",
-                "strokeWidth": 1,
-                "targetMarker": {
-                  "name": "classic"
-                },
-                "strokeDasharray": null
-              }
-            },
-            "width": 200,
-            "height": 100,
-            "zIndex": 10,
-            "connector": "smooth",
-            "data": {
-              "type": "tm.Flow",
-              "name": "Data Flow",
-              "description": "",
-              "outOfScope": false,
-              "reasonOutOfScope": "",
-              "protocol": "http",
-              "isEncrypted": false,
-              "isPublicNetwork": false,
-              "hasOpenThreats": false,
-              "threats": []
-            },
-            "id": "3d68e40b-bf52-43a9-a2c3-83b5be14c0a0",
-            "source": {
-              "cell": "4f83185f-b2dd-497c-8022-7509215f1dc8"
-            },
-            "target": {
-              "cell": "d2572a7b-a0cc-4948-b531-4b9c86290860"
-            },
-            "vertices": [
-              {
-                "x": 140,
-                "y": 250
-              }
-            ],
-            "labels": [
-              "Data Flow"
-            ]
           },
           {
             "shape": "flow",
@@ -325,12 +296,96 @@
             "labels": [
               "SQL Command"
             ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "red",
+                "targetMarker": {
+                  "name": "classic"
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Data Flow",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "protocol": "http",
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "hasOpenThreats": true,
+              "threats": [
+                {
+                  "id": "65c80c16-225a-4904-ab7d-98c3d48f8fe7",
+                  "title": "Data may be modified in transit",
+                  "status": "Open",
+                  "severity": "Medium",
+                  "type": "Tampering",
+                  "description": "Unencrypted HTTP Data flows may be modified in transit by a malicious attacker ",
+                  "mitigation": "by using data signing and harassing\nusing digital signatures\nusing strong authorization\nusing tamper-resistant protocols across communication links\nusing secure communication links with protocols that provide message integrity\nDo not transfer data without encryption",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 1,
+                  "score": "5"
+                },
+                {
+                  "id": "48c34164-f027-40de-825b-2c2c9b146e5b",
+                  "title": "Exposing information to people who aren’t authorised to see ",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Information disclosure",
+                  "description": "People who aren't authorised may get access to the personal information",
+                  "mitigation": "Enhance authorization of the system, and use technology to identify sensitive information.\nDo not transfer data without encryption. ",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 2,
+                  "score": "7"
+                },
+                {
+                  "id": "ead2cb12-f6d7-4813-ae74-96b50a42b815",
+                  "title": "Legitimate users may use the service through data flow",
+                  "status": "Open",
+                  "severity": "Low",
+                  "type": "Denial of service",
+                  "description": "It is necessary to prevent the system from providing service to legitimate users, which includes “crashing” the service, making it unusably slow, or consuming all of its store (memory and/or disk)",
+                  "mitigation": "Use firewalls, DoS protection service, VPNs, etc.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 3,
+                  "score": "2"
+                }
+              ]
+            },
+            "id": "3d68e40b-bf52-43a9-a2c3-83b5be14c0a0",
+            "source": {
+              "cell": "4f83185f-b2dd-497c-8022-7509215f1dc8"
+            },
+            "target": {
+              "cell": "d2572a7b-a0cc-4948-b531-4b9c86290860"
+            },
+            "vertices": [
+              {
+                "x": 140,
+                "y": 250
+              }
+            ],
+            "labels": [
+              "Data Flow"
+            ]
           }
         ]
       }
     ],
     "diagramTop": 2,
     "reviewer": "",
-    "threatTop": 0
+    "threatTop": 4
   }
 }
